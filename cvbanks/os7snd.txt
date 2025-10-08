@@ -1,0 +1,46 @@
+(HB)Diamond Dash|diad_os7.txt.gz
+(HB)Space Hunter|shnt_os7.txt.gz
+(HB)Space Trainer|sptr_os7.txt.gz
+BlackJack/Poker|ken_os7.txt.gz
+Boulder Dash|bdsh_os7.txt.gz
+Burger Time|bt_os7.txt.gz
+CPK - Picture Show|cpks_os7.txt.gz
+Donkey Kong|dk_os7.txt.gz
+Omega Race|omra_os7.txt.gz
+Pepper II|pep2_os7.txt.gz
+Rock'n Bolt|rckb_os7.txt.gz
+Rocky|rky_os7.txt.gz
+Root Beer Tapper|tap_os7.txt.gz
+Rolloverture|roll_os7.txt.gz
+Sammy Lightfoot|saml_os7.txt.gz
+Sir Lancelot|sirl_os7.txt.gz
+Skying|sky_os7.txt.gz
+Slither|sltr_os7.txt.gz
+Slurpy|slrp_os7.txt.gz
+Smurf Paint'n Play|spnp_os7.txt.gz
+Smurf Rescue|smrf_os7.txt.gz
+Space Fury|sfur_os7.txt.gz
+Space Panic|span_os7.txt.gz
+Spy Hunter|spyh_os7.txt.gz
+Star Trek|strk_os7.txt.gz
+Star Wars|sw_os7.txt.gz
+Subroc|subc_os7.txt.gz
+Super Action Baseball|ball_os7.txt.gz
+Super Action Football|foot_os7.txt.gz
+Super DK|sdk_os7.txt.gz
+Super DK Junior|sdkj_os7.txt.gz
+Tarzan|tarz_os7.txt.gz
+Time Pilot|tp_os7.txt.gz
+Threshold|thre_os7.txt.gz
+Tommarc the Barbarian|tom_os7.txt.gz
+Tournament Tennis|tten_os7.txt.gz
+Tunnels & Trolls|tt_os7.txt.gz
+Turbo|tur_os7.txt.gz
+Venture|vent_os7.txt.gz
+Victory|vic_os7.txt.gz
+Wing War|ww_os7.txt.gz
+Wizard of Id's Wizmat|wiz_os7.txt.gz
+Word Feud|word_os7.txt.gz
+Yolk's on You|yolk_os7.txt.gz
+Zaxxon|zax_os7.txt.gz
+TEST|test_os7.txt

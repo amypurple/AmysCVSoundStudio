@@ -1,0 +1,26 @@
+# Amy's CV Sound Studio - Git Ignore
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Build artifacts (if any)
+dist/
+build/

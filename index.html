@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amy's CV Sound Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=JetBrains+Mono&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="enhanced_editor_styles.css"/>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///w==">
+</head>
+<body class="aqua-theme">
+  <!-- Professional Menu Bar -->
+  <nav id="menuBar">
+    <div class="menu-item" data-menu="file">
+      <span class="menu-label">File</span>
+      <div class="dropdown" id="fileDropdown">
+        <div class="dropdown-item" id="importFile">
+          <span class="material-symbols-outlined">upload</span>Import ASM File
+        </div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-item" id="exportFile">
+          <span class="material-symbols-outlined">download</span>Export Current
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-menu="music">
+      <span class="menu-label">Music</span>
+      <div class="dropdown" id="musicDropdown">
+        <div class="dropdown-section">
+          <div class="dropdown-header">Demo Songs</div>
+          <div id="musicDemoList"></div>
+        </div>
+        <div class="dropdown-section">
+          <div class="dropdown-header">Sequences</div>
+          <div id="musicSequenceList"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-menu="view">
+      <span class="menu-label">View</span>
+      <div class="dropdown" id="viewDropdown">
+        <div class="dropdown-item" data-toggle="toggleEditor" data-active="true">
+          <span class="material-symbols-outlined">code</span>ASM Editor
+        </div>
+        <div class="dropdown-item" data-toggle="toggleNotes">
+          <span class="material-symbols-outlined">music_note</span>Notes Sheet
+        </div>
+        <div class="dropdown-item" data-toggle="toggleSoundTable">
+          <span class="material-symbols-outlined">library_music</span>Sound Library
+        </div>
+        <div class="dropdown-item" data-toggle="toggleSequencer">
+          <span class="material-symbols-outlined">queue_music</span>Sequencer
+        </div>
+        <div class="dropdown-item" data-toggle="toggleExport" style="display: none;">
+          <span class="material-symbols-outlined">download</span>Export
+        </div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-item" data-toggle="toggleLibrary">
+          <span class="material-symbols-outlined">videogame_asset</span>Game Library
+        </div>
+        <div class="dropdown-item" data-toggle="toggleSoundPlayer">
+          <span class="material-symbols-outlined">music_note</span>Sound Player
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-menu="settings">
+      <span class="menu-label">Settings</span>
+      <div class="dropdown" id="settingsDropdown">
+        <div class="dropdown-header">TV System</div>
+        <div class="dropdown-item">
+          <label class="radio-option"><input type="radio" name="tv" value="NTSC" checked> NTSC (60Hz)</label>
+        </div>
+        <div class="dropdown-item">
+          <label class="radio-option"><input type="radio" name="tv" value="PAL"> PAL (50Hz)</label>
+        </div>
+        <div class="dropdown-separator"></div>
+        <div class="dropdown-header">LFSR Configuration</div>
+        <div class="dropdown-item">
+          <label class="radio-option"><input type="radio" name="lfsr" value="15" checked> TI LFSR=15 (ColecoVision)</label>
+        </div>
+        <div class="dropdown-item">
+          <label class="radio-option"><input type="radio" name="lfsr" value="16"> Sega LFSR=16</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="theme-switch-wrapper">
+      <span class="material-symbols-outlined">dark_mode</span>
+      <label class="theme-switch" for="theme-toggle">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Status bar -->
+  <header id="topbar">
+    <p id="status">Amy's CV Sound Studio Ready - ColecoVision Music Development Environment</p>
+  </header>
+
+  <!-- Floating Winamp-style Sound Player -->
+  <div id="soundPlayer" class="floating-player minimized">
+    <div class="player-titlebar">
+      <div class="player-title">
+        <span class="player-icon">♪</span>
+        CV Player
+      </div>
+
+      <!-- Compact controls for minimized state -->
+      <div class="minimized-controls">
+        <button id="miniPlayBtn"><span class="material-symbols-outlined">play_arrow</span></button>
+        <button id="miniStopBtn"><span class="material-symbols-outlined">stop</span></button>
+        <button id="miniMuteBtn"><span class="material-symbols-outlined">volume_up</span></button>
+      </div>
+
+      <!-- Track info for minimized state -->
+      <div class="minimized-track-info">
+        <div class="mini-track-name" id="miniTrackName">No track</div>
+        <div class="mini-time" id="miniTime">00:00</div>
+      </div>
+
+      <div class="player-controls">
+        <button class="minimize-btn" id="minimizePlayer"><span class="material-symbols-outlined">minimize</span></button>
+        <button class="close-btn" id="togglePlayer"><span class="material-symbols-outlined">close</span></button>
+      </div>
+    </div>
+
+    <div class="player-content">
+      <div class="transport-section">
+        <div class="transport">
+          <button id="playBtn"><span class="material-symbols-outlined">play_arrow</span></button>
+          <button id="stopBtn"><span class="material-symbols-outlined">stop</span></button>
+          <button id="muteBtn"><span class="material-symbols-outlined">volume_up</span></button>
+        </div>
+        <div class="current-track" id="currentTrack">No track loaded</div>
+      </div>
+
+      <!-- Musical Sound Channel Mixer -->
+      <div id="mixer">
+        <div class="chan" data-ch="1">
+          <div class="chan-header">
+            <div class="chan-label">Tone 1</div>
+            <div class="chan-type">Square Wave</div>
+          </div>
+          <button class="mute">MUTE</button>
+          <div class="musical-info">
+            <div class="note-display" id="note-1">—</div>
+            <div class="freq-display" id="freq-1">—</div>
+            <div class="hex-display" id="hex-1">—</div>
+          </div>
+          <canvas class="vu" width="16" height="40"></canvas>
+        </div>
+        <div class="chan" data-ch="2">
+          <div class="chan-header">
+            <div class="chan-label">Tone 2</div>
+            <div class="chan-type">Square Wave</div>
+          </div>
+          <button class="mute">MUTE</button>
+          <div class="musical-info">
+            <div class="note-display" id="note-2">—</div>
+            <div class="freq-display" id="freq-2">—</div>
+            <div class="hex-display" id="hex-2">—</div>
+          </div>
+          <canvas class="vu" width="16" height="40"></canvas>
+        </div>
+        <div class="chan" data-ch="3">
+          <div class="chan-header">
+            <div class="chan-label">Tone 3</div>
+            <div class="chan-type">Square Wave</div>
+          </div>
+          <button class="mute">MUTE</button>
+          <div class="musical-info">
+            <div class="note-display" id="note-3">—</div>
+            <div class="freq-display" id="freq-3">—</div>
+            <div class="hex-display" id="hex-3">—</div>
+          </div>
+          <canvas class="vu" width="16" height="40"></canvas>
+        </div>
+        <div class="chan" data-ch="0">
+          <div class="chan-header">
+            <div class="chan-label">Noise</div>
+            <div class="chan-type" id="noise-type-0">White/Periodic</div>
+          </div>
+          <button class="mute">MUTE</button>
+          <div class="musical-info">
+            <div class="note-display" id="note-0">—</div>
+            <div class="freq-display" id="freq-0">—</div>
+            <div class="hex-display" id="hex-0">—</div>
+          </div>
+          <canvas class="vu" width="16" height="40"></canvas>
+        </div>
+      </div>
+
+      <div id="trackerLog" aria-label="Sound Events"></div>
+    </div>
+  </div>
+
+  <main id="layout">
+    <section id="right">
+      <div id="panes">
+
+        <!-- Notes Sheet Pane -->
+        <section id="notesPane" hidden></section>
+
+        <!-- ASM Editor Pane -->
+        <section id="editorPane" hidden>
+          <div class="row">
+            <button id="asmToBytes">Assemble</button>
+            <button id="bytesToAsm">Disassemble</button>
+            <label><input type="checkbox" id="inlineComments" checked> comments</label>
+          </div>
+          <textarea id="asm" spellcheck="false" placeholder="Paste multi-table .db here with labels (Table0:, Table1:, …)"></textarea>
+          <div class="row">
+            <label>Raw bytes:</label>
+            <input id="bytes" placeholder="Per table lines e.g. T0: C2 D6 ...">
+          </div>
+        </section>
+
+        <!-- Sound Library Pane -->
+        <section id="soundTablePane" hidden></section>
+        
+        <!-- Sequencer Pane -->
+        <section id="sequencerPane" hidden></section>
+        
+        <!-- Export Pane -->
+        <section id="exportPane" hidden></section>
+
+        <!-- Music Library Browser -->
+        <section id="libraryPane" hidden>
+          <div class="library-header">
+            <h2>ColecoVision Game Music Library</h2>
+            <div class="library-stats" id="libraryStats">
+              <span id="gameCount">0 games</span> •
+              <span id="trackCount">0 tracks</span>
+            </div>
+            <button id="loadLibraryBtnMain" class="load-library-btn">Load Library</button>
+          </div>
+
+          <div class="library-search">
+            <input type="text" id="librarySearch" placeholder="Search games..." />
+            <select id="libraryFilter">
+              <option value="all">All Games</option>
+              <option value="music">With Music</option>
+              <option value="sfx">With SFX Only</option>
+            </select>
+          </div>
+
+          <div id="libraryContent" class="library-grid">
+            <div class="library-placeholder">
+              <div class="placeholder-icon">♪</div>
+              <div class="placeholder-text">Click "Load Library" to browse 46 ColecoVision game soundtracks</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Welcome Pane (Default View) -->
+        <section id="welcomePane">
+          <div class="welcome-content">
+            <img src="coleco_logo.png" alt="ColecoVision Logo" class="coleco-logo-img">
+            <div class="quick-info-box">
+              <h4>First stable Version : v1.0.0 (October 2025)</h4>
+              <ul>
+                <li>Project based on the incredible &nbsp;:&nbsp; <a href="https://github.com/amypurple/cvsoundjs" target="_blank" rel="noopener noreferrer">Amy's CV SOUND OS7 DEMO</a></li>
+                <li>Game music library from &nbsp;:&nbsp; <a href="https://www.geocities.ws/newcoleco/soundbank/os7_en.html" target="_blank" rel="noopener noreferrer">Amy's Java OS7 Sound Bank</a>.</li>
+                <li>ASM editor, Notes sheet, and Sequencer for elaborated music development.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pako for gzip decompression -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+
+  <script src="sndChip.js"></script>
+  <script src="sndEngine.js"></script>
+  <script src="sndTables.js"></script>
+  <script src="speaker.js"></script>
+  <script src="asmCodec.js"></script>
+  <script src="notes.js"></script>
+  <script src="soundSystem.js"></script>
+  <script src="soundUI.js"></script>
+  <script src="musicLibrary.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* Enhanced Pattern Editor Styles */
+
+/* Stop button styles */
+#stopSequence {
+  background: #E5A000 !important; /* Winamp orange */
+  color: white !important;
+  border: 1px solid #C08000 !important;
+  margin-left: 8px;
+}
+
+#stopSequence:hover {
+  background: #F5B020 !important;
+  border-color: #D09010 !important;
+}
+
+#stopAll {
+  background: #aa2222 !important;
+  font-weight: bold;
+}
+
+#stopAll:hover {
+  background: #cc3333 !important;
+}
+
+/* Winamp Player Overrides */
+/* The main player styles are now in this file to override style.css */
+
+.pattern-editor-tabs {
+  display: flex;
+  border-bottom: 1px solid #333;
+  margin-bottom: 8px;
+}
+
+.tab-button {
+  background: #1a1a1a;
+  border: none;
+  color: #ccc;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+  background: #2a2a2a;
+  color: #fff;
+  border-bottom-color: #4a9eff;
+}
+
+.tab-button:hover {
+  background: #2a2a2a;
+}
+
+.pattern-editor-view {
+  background: #0f0f0f;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.hex-editor-header {
+  display: grid;
+  grid-template-columns: 50px 80px 60px 1fr;
+  gap: 8px;
+  padding: 4px 8px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  font-size: 12px;
+  color: #9ef;
+}
+
+.hex-editor-content {
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+}
+
+.hex-editor-row {
+  display: grid;
+  grid-template-columns: 50px 80px 60px 1fr;
+  gap: 8px;
+  padding: 2px 8px;
+  border-bottom: 1px solid #222;
+}
+
+.hex-editor-row:hover {
+  background: #1a1a1a;
+}
+
+.hex-editor-row.editable {
+  cursor: pointer;
+}
+
+.byte-index {
+  color: #666;
+  font-size: 11px;
+}
+
+.byte-hex {
+  color: #4a9eff;
+  font-weight: bold;
+}
+
+.byte-dec {
+  color: #9ef;
+}
+
+.byte-interpretation {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.byte-interpretation.command {
+  color: #ff8;
+  font-weight: bold;
+}
+
+.byte-interpretation.data {
+  color: #8f8;
+}
+
+.byte-interpretation.frequency {
+  color: #f88;
+}
+
+.pattern-analysis {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  background: #0a0a0a;
+  padding: 8px;
+  border-radius: 4px;
+  color: #ccc;
+}
