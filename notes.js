@@ -116,7 +116,8 @@ const NOTES = (() => {
       const fadeParams = getFadeParams(len);
 
       const tone3Table = [ (chT3 << 6) | 0x00, lo, (0xF << 4) | hi, len ];
-      const noiseTable = [ (chN << 6) | 0x02, 0x03, (0x0 << 4), len, ...fadeParams ];
+      // Fade bass has no filler byte: code, noise control, length, fade parameters.
+      const noiseTable = [ (chN << 6) | 0x02, 0x03, len, ...fadeParams ];
 
       return { tables:[ tone3Table, noiseTable ] };
   }

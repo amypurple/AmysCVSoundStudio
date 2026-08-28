@@ -144,6 +144,10 @@ _music_sequence:
 - **0x18, 0x58, 0x98, 0xd8** - LOOP/Repeat commands
 - **0x20-0x3F** - Rest commands (duration = value & 0x1F)
 
+Fade Bass combines a muted Tone 3 frequency with audible noise clocked by Tone 3.
+The simple noise form includes a filler byte (`00 00 03 length`), while the fade
+form does not (`02 03 length fade-steps fade-rate`).
+
 ### Timing System
 - **NTSC**: 60Hz frame rate (16.67ms per frame)
 - **PAL**: 50Hz frame rate (20ms per frame)
